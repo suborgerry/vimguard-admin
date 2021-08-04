@@ -5,6 +5,12 @@ if(passwordShowBtn) {
     passwordShowBtn.addEventListener('mousedown', () => {
         fieldPassword.type = "text";
     });
+    passwordShowBtn.addEventListener('touchstart', () => {
+        fieldPassword.type = "text";
+    });
+    passwordShowBtn.addEventListener('touchend', () => {
+        fieldPassword.type = "password";
+    });
     passwordShowBtn.addEventListener('mouseup', () => {
         fieldPassword.type = "password";
     });

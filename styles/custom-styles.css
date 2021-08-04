@@ -1944,6 +1944,7 @@ p.article_main_section_radio.disabled::before {
 
 .main_login_container_first_line {
     margin-top: 30px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
 }
@@ -1971,6 +1972,19 @@ p.article_main_section_radio.disabled::before {
     position: absolute;
     right: 15px;
     padding: 5px;
+}
+
+.password_show_btn::after {
+    content: "";
+    background: url(../images/adminpanel/showpass.png);
+    width: 16px;
+    height: 14px;
+    background-size: contain;
+    display: block;
+}
+
+.password_show_btn:focus {
+    outline: 0;
 }
 
 .password_show_btn:hover {
@@ -2162,6 +2176,49 @@ p.article_main_section_radio.disabled::before {
 @media (max-width: 1390px) {
     .blog_articles_menu_item {
         width: 270px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .main_admin {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main_login_container {
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+        width: max-content;
+        margin: 20px auto;
+        border-radius: 10px;
+    }
+
+    .main_login_container_left,
+    .main_login_container_right {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .main_login_container_left  img {
+        border-radius: 10px
+    }
+
+    .main_login_container_center {
+        width: 100%;
+        padding: 20px 20px;
+    }
+
+    .main_login_container_right {
+        padding: 30px 0px;
+    }
+
+    .main_login_container_last_line {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        margin: 20px 0;
     }
 }
 
