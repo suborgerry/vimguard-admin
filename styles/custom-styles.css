@@ -2018,6 +2018,7 @@ p.article_main_section_radio.disabled::before {
 .main_login_container_input_email:focus,
 .main_login_container_input_password:focus {
     border: 1px solid #4E22D0;
+    outline: 0;
 }
 
 .main_login_container_input_password_container.error_password > input.main_login_container_input_password,
@@ -2311,6 +2312,25 @@ p.article_main_section_radio.disabled::before {
 
 .main_mailsended_info_text {
     color: #000;
+    font-size: 14px;
+}
+
+.main_signup_error_password {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.main_login_container_input_password_container.error_password ~ .main_signup_error_password .main_signup_error_item {
+    color: #F03836;
+}
+
+.main_signup_error_list {
+    padding-left: 25px;
+    margin-top: 20px;
+}
+
+.main_signup_error_item {
+    color: #999999;
     font-size: 14px;
 }
 
