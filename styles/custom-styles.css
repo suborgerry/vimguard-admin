@@ -1926,6 +1926,207 @@ p.article_main_section_radio.disabled::before {
     margin: 19px 40px;
 }
 
+.main_login_container {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    max-width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    margin: 90px auto;
+}
+
+.main_login_container_center {
+    width: 48%;
+    padding: 0 55px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_login_container_first_line {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_login_container_title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.main_login_container_signup {
+    color: #4E22D0;
+    font-weight: 500;
+    font-size: 24px;
+    text-decoration-line: underline;
+}
+
+.main_login_container_input_password_container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.password_show_btn {
+    position: absolute;
+    right: 15px;
+    padding: 5px;
+}
+
+.password_show_btn:hover {
+    cursor: pointer;
+}
+
+.main_login_container_input_email_container {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.main_login_container_input_email_container.error_email::after {
+    content: "Error email";
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    color: #F03836;
+}
+
+.main_login_container_input_email,
+.main_login_container_input_password {
+    background: #F3F3F3;
+    border-radius: 25px;
+    border: 0;
+    font-size: 14px;
+    padding: 14px 19px;
+    width: 100%;
+}
+
+.main_login_container_input_email:focus,
+.main_login_container_input_password:focus {
+    border: 1px solid #4E22D0;
+}
+
+.main_login_container_input_password_container.error_password > input.main_login_container_input_password,
+.main_login_container_input_email_container.error_email > input.main_login_container_input_email {
+    border: 1px solid #F03836;
+}
+
+.main_login_container_input_password_container.error_password::after {
+    content: "Wrong password";
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    color: #F03836;
+}
+
+.main_login_container_center > input {
+    margin-bottom: 20px;
+}
+
+.main_login_container_center input:focus {
+    border: 0;
+    outline: 0;
+}
+
+.main_login_container_last_line {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.main_login_forgot_password {
+    color: #4E22D0;
+    font-size: 18px;
+    text-decoration-line: underline;
+}
+
+.main_login_continue_btn.disabled {
+    background: #44ED9C;
+    box-shadow: 0px 20px 40px rgba(68, 237, 156, 0.2);
+    border-radius: 36px;
+    color: #10147C;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    margin: auto;
+}
+
+.main_login_continue_btn.disabled:hover {
+    cursor: not-allowed;
+}
+
+.main_login_container_checkbox_container {
+    display: flex;
+    align-items: center;
+}
+
+.main_login_container_checkbox_container label {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #443E3E;
+    margin-left: 10px;
+}
+
+.main_login_container_left,
+.main_login_container_right {
+    max-width: 323px;
+    width: 26%;
+}
+
+.main_login_container_right {
+    background: linear-gradient(180deg, #0C053E 2.05%, #261C6A 100.05%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 29px;
+}
+
+.main_login_container_right a {
+    background: #3E357A;
+    box-shadow: 0px 10px 20px rgba(12, 5, 62, 0.6);
+    border-radius: 30px;
+    width: 272px;
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 11px 0;
+    position: relative;
+    transition: all ease 0.3s;
+}
+
+.main_login_container_right a:hover {
+    background: #6358A8;
+    box-shadow: 0px 10px 20px rgba(48, 39, 116, 0.6);
+    transform: scale(1.05);
+}
+
+.main_login_google::before {
+    content: "";
+    display: block;
+    background: url(../images/adminpanel/flat-color-icons_google.png);
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    margin-right: 9px;
+}
+
+.main_login_facebook::before {
+    content: "";
+    display: block;
+    background: url(../images/adminpanel/vector-facebook.png);
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    margin-right: 9px;
+}
+
 /* End admin pages */
 
 @media (min-width: 1580px) {
