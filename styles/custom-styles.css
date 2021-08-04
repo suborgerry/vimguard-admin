@@ -2294,6 +2294,26 @@ p.article_main_section_radio.disabled::before {
     text-decoration-line: underline;
 }
 
+.main_mailsended_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.main_mailsended_info_title {
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.main_mailsended_info_text {
+    color: #000;
+    font-size: 14px;
+}
+
 /* End admin pages */
 
 @media (min-width: 1580px) {
@@ -2455,6 +2475,26 @@ p.article_main_section_radio.disabled::before {
     }
     .header_first_line_lang_buttons_container {
         width: max-content;
+    }
+
+    .main_signup_container {
+        flex-direction: column;
+        max-width: 350px;
+    }
+
+    .main_signup_container_left img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    .main_signup_container_right {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .main_signup_container_left,
+    .main_signup_container_right {
+        width: 100%;
     }
 }
 
