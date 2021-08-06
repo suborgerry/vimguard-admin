@@ -2372,6 +2372,7 @@ body.logged {
 .main_page_first_line {
     max-width: 1250px;
     margin: auto;
+    width: 90%;
 }
 
 .main_page_menu {
@@ -2436,6 +2437,36 @@ body.logged {
     font-size: 20px;
     color: #000000;
     margin-bottom: 0;
+}
+
+.main_page_product_empty {
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin-bottom: 90px;
+    padding: 50px;
+}
+
+.main_page_product_empty_text {
+    font-size: 20px;
+    color: #000;
+}
+
+.main_page_product_empty_btn {
+    background: #44ED9C;
+    box-shadow: 0px 20px 40px rgba(68, 237, 156, 0.2);
+    border-radius: 36px;
+    color: #10147C;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 20px 40px;
+    font-weight: 700;
 }
 
 /* End admin pages */
@@ -2928,6 +2959,10 @@ body.logged {
         flex-direction: column;
         margin-bottom: 20px;
         gap: 20px;
+    }
+
+    .main_page_product_empty {
+        width: 90%;
     }
 }
 
