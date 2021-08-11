@@ -242,5 +242,26 @@ if(accuntInfoContainer) {
             }
         }
     }
-
 };
+
+const faqQuestion = document.querySelector('.main_admin_questions_container');
+if(faqQuestion) {
+  faqQuestion.addEventListener('click', evt => {
+    const item = evt.target.matches('h5') ? evt.target : (evt.target.matches('span') ? evt.target.parentElement : '');
+    openQuestion(item);
+  });
+  function openQuestion(item) {
+    const questionContainer = item.parentElement;
+    const answer = questionContainer.querySelector('.main_admin_questions_answer');
+    const answerHeight = answer.clientHeight;
+    const questionContainerHeight = questionContainer.clientHeight;
+    if(questionContainerHeight > 99) {
+      questionContainer.style.height = 99 + 'px';
+      item.classList.remove('active');
+    } else {
+      item.classList.add('active');
+      questionContainer.style.height = questionContainerHeight + answerHeight + 40 + 'px';
+    }
+  };
+};
+

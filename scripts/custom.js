@@ -49,7 +49,7 @@ window.avastGlobals.web = {
 const faqQuestion = document.querySelector('.product_faq_container');
 if(faqQuestion) {
   faqQuestion.addEventListener('click', evt => {
-    let item = evt.target.matches('h5') ? evt.target : evt.target.parentElement
+    let item = evt.target.matches('h5') ? evt.target : (evt.target.matches('span') ? evt.target.parentElement : '');
     openQuestion(item);
   });
   function openQuestion(item) {

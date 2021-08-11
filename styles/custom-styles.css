@@ -2938,6 +2938,33 @@ body.logged {
     right: 30px;
 }
 
+.main_admin_questions_question:hover {
+    color: #10147C;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 35px 60px;
+    position: relative;
+    z-index: 9;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.main_admin_questions_question:hover::after {
+    background-image: url('../images/plushover.png');
+    background-color: #4E22D0;
+    box-shadow: 0px 20px 30px rgba(78, 34, 208, 0.3);
+    transition: all ease 0.3s;
+}
+
+.main_admin_questions_question.active::after {
+    transform: rotate(135deg);
+    background-image: url('../images/plushover.png');
+    background-color: #4E22D0;
+    box-shadow: 15px -20px 30px rgb(78 34 208 / 30%);
+}
+
 .main_admin_questions_answer {
     margin: 0;
     padding: 35px 60px;
@@ -2965,6 +2992,9 @@ body.logged {
     max-width: 1250px;
     margin: auto;
     padding-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 /* End admin pages */
