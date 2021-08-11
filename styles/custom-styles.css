@@ -2649,6 +2649,101 @@ body.logged {
     cursor: not-allowed;
 }
 
+.main_admin_settings_container {
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 90px;
+}
+
+.main_admin_settings_item {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+}
+
+.main_admin_settings_item > img {
+    border-radius: 10px 0 0 10px;
+} 
+
+.main_admin_settings_item_info {
+    margin-left: 60px;
+    margin-top: 60px;
+}
+
+.main_admin_settings_item_info_title {
+    font-weight: bold;
+    font-size: 24px;
+    color: #000;
+}
+
+.main_admin_settings_item_info_text {
+    font-size: 20px;
+    color: #000;
+    max-width: 844px;
+}
+
+.main_admin_settings_item_delete_account {
+    border: 2px solid #10147C;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 20px 40px rgba(68, 237, 156, 0.2));
+    border-radius: 36px;
+    padding: 20px 40px;
+    color: #10147C;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all ease 0.3s;
+}
+
+.main_admin_settings_item_delete_account:focus {
+    outline: none;
+}
+
+.main_admin_settings_item_delete_account:hover {
+    transform: scale(1.1);
+}
+
+.main_admin_settings_item_delete_account:active {
+    background: #3ACA85;
+    box-shadow: 0px 20px 40px rgba(67, 237, 156, 0.4);
+}
+
+.main_admin_settings_item_info_button {
+    background: #44ED9C;
+    box-shadow: 0px 20px 40px rgba(68, 237, 156, 0.2);
+    border-radius: 36px;
+    color: #10147C;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    transition: all ease 0.3s;
+}
+
+.main_admin_settings_item_info_button:hover {
+    background: #44ED9C;
+    box-shadow: 0px 20px 40px rgba(67, 237, 156, 0.4);
+    border-radius: 36px;
+    transform: scale(1.1);
+}
+
+.main_admin_settings_item_info_button:focus {
+    outline: none;
+}
+
+.main_admin_settings_item_info_button:active {
+    background: #3ACA85;
+    box-shadow: 0px 20px 40px rgba(67, 237, 156, 0.4);
+    border-radius: 36px;
+}
+
 /* End admin pages */
 
 @media (min-width: 1580px) {
