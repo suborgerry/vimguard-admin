@@ -2679,12 +2679,14 @@ body.logged {
     font-weight: bold;
     font-size: 24px;
     color: #000;
+    margin-bottom: 0;
 }
 
 .main_admin_settings_item_info_text {
     font-size: 20px;
     color: #000;
     max-width: 844px;
+    margin-bottom: 0;
 }
 
 .main_admin_settings_item_delete_account {
@@ -2742,6 +2744,154 @@ body.logged {
     background: #3ACA85;
     box-shadow: 0px 20px 40px rgba(67, 237, 156, 0.4);
     border-radius: 36px;
+}
+
+.main_admin_settings_item_info_content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 363px;
+    margin: 20px 0;
+}
+
+.main_admin_settings_item_info_content > * {
+    flex-basis: 100%;
+}
+
+.main_admin_settings_item_info_content input {
+    background: #F3F3F3;
+    border-radius: 25px;
+    font-size: 14px;
+    border: none;
+    padding: 14px 19px;
+    width: 363px;
+}
+
+.main_admin_settings_item_info_content input:focus {
+    outline: none;
+}
+
+.main_admin_settings_item_info_content button {
+    flex-basis: auto;
+    transition: all ease 0.3s;
+}
+
+.main_admin_settings_item_info_content_sn_save:focus,
+.main_admin_settings_item_info_content_sn_cancel:focus {
+    outline: none;
+}
+
+.main_admin_settings_item_info_content_sn_save {
+    background: #44ED9C;
+    box-shadow: 0px 20px 40px rgba(68, 237, 156, 0.2);
+    border-radius: 36px;
+    color: #10147C;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 20px 40px;
+    text-transform: uppercase;
+}
+
+.main_admin_settings_item_info_content_sn_save:not([disabled]):hover {
+    background: #44ED9C;
+    box-shadow: 0px 20px 40px rgba(67, 237, 156, 0.4);
+    transform: scale(1.1);
+}
+
+.main_admin_settings_item_info_content_sn_save:not([disabled]):active {
+    background: #3ACA85;
+    box-shadow: 0px 20px 40px rgba(67, 237, 156, 0.4);
+}
+
+.main_admin_settings_item_info_content_sn_save[disabled] {
+    background: #CCCCCC;
+    opacity: 0.7;
+}
+
+.main_admin_settings_item_info_content_sn_save[disabled]:hover {
+    cursor: not-allowed;
+}
+
+.main_admin_settings_item_info_content_sn_cancel {
+    border: 2px solid #10147C;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 20px 40px rgba(68, 237, 156, 0.2));
+    border-radius: 36px;
+    color: #10147C;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 20px 40px;
+}
+
+.main_admin_settings_item_info_content_sn_cancel:hover {
+    transform: scale(1.1);
+}
+
+.main_admin_settings_item_info_content_sn_cancel:active {
+    background: #3ACA85;
+    box-shadow: 0px 20px 40px rgba(67, 237, 156, 0.4);
+}
+
+.main_admin_settings_item_info_content.password input:focus,
+.main_admin_settings_item_info_content.email input:focus {
+    border: 1px solid #4E22D0;
+    background: #F3F3F3;
+}
+
+.admin_modal .modal-content {
+    background: #FFFFFF;
+    border: 1px solid #4E22D0;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 20px rgba(11, 7, 61, 0.1);
+    border-radius: 20px;
+    padding: 60px 40px;
+}
+
+.admin_modal .modal-dialog {
+    max-width: 640px;
+}
+
+.admin_modal .modal-title {
+    color: #10147C;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.admin_modal .modal-header button {
+    margin-top: -10px;
+}
+
+.admin_modal .moda-body {
+    color: #2A3145;
+    font-size: 14px;
+}
+
+.admin_modal .modal-footer {
+    justify-content: center;
+    padding: 0;
+}
+
+.admin_modal .modal-footer .delete_account {
+    background: #F03836;
+    box-shadow: 0px 20px 40px rgba(240, 56, 54, 0.2);
+    border-radius: 36px;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    margin-top: 40px;
+    transition: all ease 0.3s;
+}
+
+.admin_modal .modal-footer .delete_account:focus {
+    outline: none;
+}
+
+.admin_modal .modal-footer .delete_account:hover {
+    transform: scale(1.1);
 }
 
 /* End admin pages */
@@ -2949,6 +3099,16 @@ body.logged {
     .main_page_product_list_container_item.product {
         padding-left: 50px;
     }
+
+    .main_admin_settings_container {
+        padding: 30px;
+        max-width: 100%;
+    }
+    
+    .main_admin_settings_item_info {
+        margin-left: 40px;
+        margin-top: 40px;
+    }
 }
 
 @media (max-width: 910px) {
@@ -3152,6 +3312,31 @@ body.logged {
     .article_main_section_right_title {
         max-width: 261px;
     }
+
+    .main_admin_settings_item > img {
+        display: none;
+    }
+    
+    .main_admin_settings_item_info {
+        margin: 40px;
+    }
+
+    .main_admin_settings_item_info_content {
+        margin-bottom: 0;
+    }
+
+    .admin_modal .modal-dialog {
+        max-width: 100%;
+        margin: 0 20px;
+    }
+
+    .main_admin_settings_item_info_text {
+        overflow-wrap: anywhere;
+    }
+
+    .main_page_first_line_title {
+        text-align: center;
+    }
 }
 
 @media (max-width: 560px) {
@@ -3286,6 +3471,33 @@ body.logged {
 
     .main_page_product_empty {
         width: 90%;
+    }
+
+    .main_admin_settings_item_info {
+        margin: 20px;
+    }
+
+    .main_admin_settings_item_info_content input {
+        width: 260px;
+    }
+
+    .main_admin_settings_item_info_content_sn_save {
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+
+    .main_admin_settings_item_info_content_sn_cancel {
+        font-size: 13px;
+        padding: 6px 14px;
+    }
+
+    .main_admin_settings_item_info_button {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    .admin_modal .modal-content {
+        padding: 20px 20px;
     }
 }
 

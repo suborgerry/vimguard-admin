@@ -34,10 +34,11 @@
     <meta property="og:description"
         content="Join 180 million others and get award-winning free antivirus for PC, Mac & Android. Surf safely & privately with our VPN. Download VimGuard today!">
 
+    <link href="./styles/bootstrap.min.css" rel="stylesheet">
     <link href="./styles/index.css" media="all" rel="stylesheet">
-    <link href="./styles/download-popup.css" media="all" rel="stylesheet" />
+    <link href="./styles/download-popup.css" media="all" rel="stylesheet"/>
     <link href="./styles/local.css" rel="stylesheet" media="all" />
-    <link rel="stylesheet" href="./styles/custom-styles.css">
+    <link href="./styles/custom-styles.css" rel="stylesheet">
 
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script>
@@ -70,11 +71,11 @@
                 <img src="./images/adminpanel/ac3.jpg" alt="Personal information">
                 <div class="main_admin_settings_item_info">
                     <p class="main_admin_settings_item_info_title">Personal information</p>
-                    <div class="main_admin_settings_item_info_content">
-                        <p class="main_admin_settings_item_info_text">First Name: <b>Not Set</b></p>
-                        <p class="main_admin_settings_item_info_text">Last Name: <b>Not Set</b></p>
+                    <div class="main_admin_settings_item_info_content name">
+                        <p class="main_admin_settings_item_info_text">First Name: <b id="fn">Not Set</b></p>
+                        <p class="main_admin_settings_item_info_text">Last Name: <b id="sn">Not Set</b></p>
+                        <button type="button" class="main_admin_settings_item_info_button">Edit</button>
                     </div>
-                    <button type="button" class="main_admin_settings_item_info_button">Edit</button>
                 </div>
             </div>
             <div class="main_admin_settings_item">
@@ -84,10 +85,10 @@
                     <p class="main_admin_settings_item_info_text">
                         If you’ve purchased any subscriptions with other email addresses, just add those addresses here and you can manage all your subscriptions with one Vim Account
                     </p>
-                    <div class="main_admin_settings_item_info_content">
-                        <p class="main_admin_settings_item_info_text">Primary email: <b>example@mail.com</b></p>
+                    <div class="main_admin_settings_item_info_content email">
+                        <p class="main_admin_settings_item_info_text">Primary email: <b id="email">example@mail.com</b></p>
+                        <button type="button" class="main_admin_settings_item_info_button">+ add another email</button>
                     </div>
-                    <button type="button" class="main_admin_settings_item_info_button">+ add another email</button>
                 </div>
             </div>
             <div class="main_admin_settings_item">
@@ -97,17 +98,21 @@
                     <p class="main_admin_settings_item_info_text">
                         Your password must be at least 8 characters long. (Try a random sentence like "why_are_3_eyed_cats_such_good_doctors?" to make it both memorable and harder to guess.)
                     </p>
-                    <button type="button" class="main_admin_settings_item_info_button">Change password</button>
+                    <div class="main_admin_settings_item_info_content password">
+                        <button type="button" class="main_admin_settings_item_info_button">Change password</button>
+                    </div>
                 </div>
             </div>
             <div class="main_admin_settings_item">
-                <img src="./images/adminpanel/ac6.jpg" alt="Email management">
+                <img src="./images/adminpanel/ac6.jpg" alt="Delete account">
                 <div class="main_admin_settings_item_info">
-                    <p class="main_admin_settings_item_info_title">Email management</p>
+                    <p class="main_admin_settings_item_info_title">Delete account</p>
                     <p class="main_admin_settings_item_info_text">
                         If you delete your account, you won’t be able to manage all your subscriptions from one place anymore. But you can still use your Avast products as long as you have a valid activation code.
                     </p>
-                    <button type="button" class="main_admin_settings_item_delete_account">Delete account</button>
+                    <div class="main_admin_settings_item_info_content delete">
+                        <button type="button" data-toggle="modal" data-target="#delete-modal" class="main_admin_settings_item_delete_account">Delete account</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -220,6 +225,33 @@
                 </div>
             </div>
         </div>
+        <!-- Модальное окно -->
+        <div class="modal fade admin_modal" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">
+                        Are you sure you want to delete your Vim Account?
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Your Vim Account will be permanently deleted, and you’ll lose your ability to manage all your subscriptions from one place. But your Vim subscriptions will still be active (make sure you keep your activation codes!).
+                    <br>
+                    <br>
+                    Are you really sure you want to delete your Vim Account?
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="delete_account">Delete account</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <script src="./scripts/jquery-3.6.0.min.js"></script>
+        <script src="./scripts/popper.min.js"></script>
+        <script src="./scripts/bootstrap/bootstrap.min.js"></script>
         <script src="./scripts/admin-scripts.js"></script>
     </footer>
 </body>
