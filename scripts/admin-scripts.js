@@ -36,7 +36,13 @@ document.addEventListener('DOMContentLoaded', showPassword);
 const productContainer = document.querySelector('.main_page_product_list_main');
 if(productContainer) {
     productContainer.addEventListener('change', evt => {
-        if(evt.target.matches('input')) { checkProduct(evt.target) }
+        if(evt.target.matches('input')) { 
+            // Чек продукта и разблокировка кнопки загрузки
+            checkProduct(evt.target);
+
+            // Дропдаун для кея продукта
+            dropdownKey(evt.target, evt.target.checked);
+        }
     });
 
     function checkProduct(input) {
@@ -53,6 +59,30 @@ if(productContainer) {
                 downloadBtn.disabled = true;
             }
         };
+    }
+
+    function dropdownKey(input, checked) {
+        if(checked) {
+            const productKey = '1234-5678-8765-4321';
+            const keyContainer = document.createElement('div');
+
+            const keyTitle = document.createElement('span');
+            const productKeyContainer = document.createElement('span');
+            const productLabelText = input.parentElement.querySelector('label').innerText;
+        
+            keyContainer.classList.add('key_container');
+            keyTitle.classList.add('key_title');
+            productKeyContainer.classList.add('product_key_container');
+
+            keyTitle.innerText = `Your license key for ${productLabelText}: `;
+            productKeyContainer.innerText = productKey;
+            keyContainer.append(keyTitle, productKey);
+            input.parentElement.parentElement.classList.add('checked');
+            input.parentElement.parentElement.after(keyContainer);
+        } else {
+            input.parentElement.parentElement.classList.remove('checked');
+            document.querySelector('.key_container').remove()
+        }
     }
 };
 
@@ -264,4 +294,3 @@ if(faqQuestion) {
     }
   };
 };
-
